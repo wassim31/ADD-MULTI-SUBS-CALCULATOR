@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     //this variable should be named choice instead of chose (chose is a verb...)
     int choice;
     printf("DO YOU WANT \n1-ADDITION\n2-SUBSTRACTION\n3-MULTIPLICATION\n\n");
-    scanf("%d", &chose);
+    scanf("%d", &choice);
     // No matter what operation you will perform, you'll need 3 variables.
     // Better to declare them here and use them in the different blocks
     // You had declared 9 variables, 3 per block...
@@ -85,10 +85,7 @@ int main(int argc, char *argv[])
         {
         printf("YOU ARE REAL HUMAN , CALCULATE USING YOUR BRAIN xD");
     }
-
-
     return 0;
-
 }
 
 
