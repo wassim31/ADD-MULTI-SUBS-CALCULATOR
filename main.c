@@ -1,157 +1,113 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(int argc, char *argv[])
-{
-    printf("\tWELCOME TO WASS-CALCULATOR\n");
-    //this variable should be named choice instead of chose (chose is a verb...)
-    int choice;
-    printf("DO YOU WANT \n1-ADDITION\n2-SUBSTRACTION\n3-MULTIPLICATION\n\n");
-    scanf("%d", &choice);
-    // No matter what operation you will perform, you'll need 3 variables.
-    // Better to declare them here and use them in the different blocks
-    // You had declared 9 variables, 3 per block...
-    int x, y, result;
-    if (choice == 1)
+#include <math.h>
+int main(int argc , char *argv[])
     {
-        printf("YOU CHOSE ADDITION CALCULATOR\n");
+                int choice, x, y;
+                double a, b, z;
+                // this floating number data type for pow function included by math.h library
+                // a is the number / b is the power / z is the result
 
-        printf("THE ADDITION WILL BE LIKE THAT : \n");
+        printf("CHOOSE THE CALCULATION METHOD \n");
+printf(" 1-ADDITION \n 2-SUBSTRACTION \n 3-MULTIPLICATION \n 4-DEVISION \n 5-NUMBER-POWER\n\n");
+       // choosing the right calculation type
+                 scanf("%d", &choice);
+switch(choice) {
+    case 1:
+    printf("YOU CHOSE THE addition type\n");
 
-        printf("X + Y = RESULT\n");
+    printf("THE ADDITION WILL BE LIKE THAT\n");
 
-        printf("ADD THE X VARIABLE\n");
+    printf("\t X + Y = RESULT");
+                    printf("ENTER THE X VALUE\n");
+    scanf("%d", &x);
+                    printf("ENTER THE Y VALUE\n");
+    scanf("%d", &y);
+                    printf("the result is : %d", x+y);
+    break;
 
-        scanf("%d", &x);
+    case 2:
+        printf("YOU CHOSE THE SUBSTRACTION type\n");
 
-        printf("ADD THE Y VARIABLE\n");
+    printf("THE SUBSTRACTION WILL BE LIKE THAT\n");
 
-        scanf("%d", &y);
+    printf("\t X - Y = RESULT");
+                    printf("ENTER THE X VALUE\n");
+    scanf("%d", &x);
+                    printf("ENTER THE Y VALUE\n");
+    scanf("%d", &y);
+                    printf("the result is : %d", x-y);
+    break;
 
-        result = x + y;
+    case 3:
+            printf("YOU CHOSE THE MULTIPLICATION type\n");
 
-        printf("THE RESULT IS : %d", result);
+    printf("THE MULTIPLICATION WILL BE LIKE THAT\n");
 
-/* THE ADDITION PART IS FIINSHED */
+    printf("\t X * Y = RESULT");
+                    printf("ENTER THE X VALUE\n");
+    scanf("%d", &x);
+                    printf("ENTER THE Y VALUE\n");
+    scanf("%d", &y);
+                    printf("the result is : %d", x*y);
 
+    break;
+
+    case 4:
+                printf("YOU CHOSE THE DEVISION type\n");
+
+    printf("THE DEVISION WILL BE LIKE THAT\n");
+
+    printf("\t X / Y = RESULT");
+                    printf("ENTER THE X VALUE\n");
+    scanf("%d", &x);
+                    printf("ENTER THE Y VALUE\n");
+    scanf("%d", &y);
+                    printf("the result is : %d", x/y);
+
+    break;
+
+    case 5:
+                printf("YOU CHOSE THE NUMBER-POWER CALCULATION type\n\n");
+
+    printf("THE CALCULATION WILL BE LIKE THAT\n\n");
+
+    printf("\tX^n\n\n");
+    printf("Enter the number X\n");
+                scanf("%lf", &a);
+    printf("Enter the power n\n");
+                scanf("%lf", &b);
+   z = pow(a, b);
+
+    printf("The result is : %.0f \n", z);
+    break;
+
+    default:
+    printf("YOU ARE REAL HUMAN , USE YOUR BRAIN xD");
+    break;
+
+} // THE END OF SWITCH STATEMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+        return 0;
     }
-    else if (choice == 2)
-    {
-
-        printf("YOU CHOSE SUBSTRACTION CALCULATOR\n");
-
-        printf("THE SUBSCTRATION WILL BE LIKE THAT : \n");
-
-        printf("X - Y = RESULT\n");
-
-        printf("ADD THE X VARIABLE\n");
-
-        scanf("%d", &x);
-
-        printf("ADD THE Y VARIABLE\n");
-
-        scanf("%d", &y);
-
-        result = x - y;
-
-        printf("THE RESULT IS : %d", result);
-
-        /* THE SUBSTRACTION PART IS FIINSHED */
-
-    }
-    else if (choice == 3)
-    {
-        printf("YOU CHOSE MULTIPLICATION CALCULATOR\n");
-
-        printf("THE MULTIPLICATION WILL BE LIKE THAT : \n");
-
-        printf("X * Y = RESULT\n");
-        printf("ADD THE X VARIABLE\n");
-
-        scanf("%d", &x);
-
-        printf("ADD THE Y VARIABLE\n");
-
-        scanf("%d", &y);
-
-        result = x * y;
-
-        printf("THE RESULT IS : %d", result);
-
-        /* THE MULTIPLICATION PART IS FIINSHED */
-
-    }
-    else
-        {
-        printf("YOU ARE REAL HUMAN , CALCULATE USING YOUR BRAIN xD");
-    }
-    return 0;
-}
 
 
-void anotherPossibility()
-{
-    printf("\tWELCOME TO WASS-CALCULATOR\n");
-    int choice, x, y;
-    printf("DO YOU WANT \n1-ADDITION\n2-SUBSTRACTION\n3-MULTIPLICATION\n\n");
-    scanf("%d", &choice);
-    switch choice:
-        {
-            case 1:
-                printf("YOU CHOSE ADDITION CALCULATOR\n");
 
-            printf("THE ADDITION WILL BE LIKE THAT : \n");
 
-            printf("X + Y = RESULT\n");
 
-            printf("ADD THE X VARIABLE\n");
 
-            scanf("%d", &x);
 
-            printf("ADD THE Y VARIABLE\n");
 
-            scanf("%d", &y);
-
-            printf("THE RESULT IS : %d", x+y);
-            break;
-
-            case 2:
-                printf("YOU CHOSE SUBSTRACTION CALCULATOR\n");
-
-            printf("THE SUBSCTRATION WILL BE LIKE THAT : \n");
-
-            printf("X - Y = RESULT\n");
-
-            printf("ADD THE X VARIABLE\n");
-
-            scanf("%d", &x);
-
-            printf("ADD THE Y VARIABLE\n");
-
-            scanf("%d", &y);
-
-            printf("THE RESULT IS : %d", x-y);
-            break;
-
-            case 3:
-                printf("YOU CHOSE MULTIPLICATION CALCULATOR\n");
-
-            printf("THE MULTIPLICATION WILL BE LIKE THAT : \n");
-
-            printf("X * Y = RESULT\n");
-            printf("ADD THE X VARIABLE\n");
-
-            scanf("%d", &x);
-
-            printf("ADD THE Y VARIABLE\n");
-
-            scanf("%d", &y);
-
-            printf("THE RESULT IS : %d", x*y);
-            break;
-
-            default:
-                printf("YOU ARE REAL HUMAN , CALCULATE USING YOUR BRAIN xD");
-            break;
-        }
-}
+git config --global user.name "wassim31"
